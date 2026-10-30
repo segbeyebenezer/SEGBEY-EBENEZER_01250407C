@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Student Study Planner</h1>
+      <p>Organize your courses, tasks, and deadlines efficiently.</p>
+    </header>
+
+    <main>
+      <!-- Task Form -->
+      <form id="task-form">
+        <div class="form-group">
+          <input type="text" id="task-title" placeholder="Task title (e.g., Read Chapter 3)...">
+        </div>
+        <div class="form-group">
+          <input type="text" id="course-name" placeholder="Course/Subject (e.g., Pure Mathematics)...">
+        </div>
+        <button type="submit" id="add-btn">Add Task</button>
+      </form>
+      <div id="error-message" class="error-message">Please enter a task title before submitting.</div>
+
+      <!-- Controls & Filter -->
+      <div class="controls">
+        <h2>My Tasks</h2>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
+      <!-- Task List Container -->
+      <ul id="task-list" class="task-list"></ul>
+      <div id="empty-state" class="empty-state">No study tasks added yet. Add a task above to get started!</div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
